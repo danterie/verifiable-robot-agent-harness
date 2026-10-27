@@ -1,0 +1,32 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Harness: run offline demo",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/bin/python scripts/run_lesson24.py",
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "PYTHONPATH": "${workspaceFolder}",
+          "RMW_IMPLEMENTATION": "rmw_cyclonedds_cpp"
+        }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Codex: start in workspace",
+      "type": "shell",
+      "command": "codex",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "panel": "dedicated",
+        "reveal": "always",
+        "focus": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}

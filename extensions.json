@@ -1,0 +1,26 @@
+{
+  "recommendations": [
+    "openai.chatgpt",
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-python.debugpy",
+    "charliermarsh.ruff",
+    "ms-python.black-formatter",
+    "ms-vscode.cpptools",
+    "ms-vscode.cmake-tools",
+    "ms-vscode.makefile-tools",
+    "twxs.cmake",
+    "ms-toolsai.jupyter",
+    "redhat.vscode-yaml",
+    "ms-azuretools.vscode-docker",
+    "ms-iot.vscode-ros",
+    "ranch-hand-robotics.rde-ros-2",
+    "ranch-hand-robotics.urdf-editor",
+    "deitry.colcon-helper",
+    "foxglove.foxglove-mcap-explorer",
+    "vincent-templier.vscode-netron",
+    "sbsnippets.pytorch-snippets",
+    "ms-vscode-remote.remote-ssh",
+    "ms-vscode-remote.remote-containers"
+  ]
+}

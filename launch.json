@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Harness: offline demo",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/run_lesson24.py",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}",
+        "RMW_IMPLEMENTATION": "rmw_cyclonedds_cpp"
+      },
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}

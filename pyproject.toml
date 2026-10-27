@@ -1,0 +1,9 @@
+[project]
+name = "robot-agent-harness"
+version = "0.1.0"
+description = "Verifiable robot agent harness for simulated desktop pick-and-place"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

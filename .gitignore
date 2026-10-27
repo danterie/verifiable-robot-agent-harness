@@ -1,0 +1,16 @@
+.venv/
+.env
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+data/episodes/
+*.sqlite
+*.db
+.ipynb_checkpoints/
+
+# Local planning notes and generated reports
+第24-34课实战安排.md
+第35-40课准实时强化学习与π0.7实战计划.md
+reports/

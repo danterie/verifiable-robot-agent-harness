@@ -1,0 +1,14 @@
+seed: 42
+task: "把 red_box_1 放入 target_bin_1"
+objects:
+  red_box_1:
+    position: [0.35, 0.10, 0.05]
+    size: [0.04, 0.04, 0.04]
+    in_bin: false
+  target_bin_1:
+    position: [0.55, -0.10, 0.02]
+    size: [0.18, 0.18, 0.06]
+robot:
+  ee_position: [0.20, 0.00, 0.25]
+  holding: null
+  ready: true

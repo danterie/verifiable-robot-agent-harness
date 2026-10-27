@@ -1,0 +1,36 @@
+# Core ML
+torch==2.11.0+cu128
+torchvision==0.26.0+cu128
+torchaudio==2.11.0+cu128
+tensorflow==2.21.0
+keras==3.15.1
+numpy
+scipy
+einops
+diffusers
+transformers
+accelerate
+
+# Simulation (PyBullet needs a C++ compiler; MuJoCo is the default desktop sim)
+mujoco
+gymnasium
+opencv-python
+matplotlib
+imageio
+transforms3d
+
+# Agent harness
+openai
+httpx
+pydantic
+python-dotenv
+pyyaml
+jsonschema
+langgraph
+langchain-core
+typeguard
+tqdm
+rich
+
+# Dev
+pytest

@@ -1,0 +1,62 @@
+skills:
+  - name: observe_scene
+    description: 观察仿真桌面并返回可见物体
+    parameters: {}
+    preconditions: [robot_ready]
+    effects: [scene_observed]
+    timeout_s: 5
+    risk: low
+    failure_codes: [timeout]
+    verifier: null
+  - name: pick_object
+    description: 抓取指定物体并验证是否成功
+    parameters:
+      object_id: string
+    preconditions: [object_visible, robot_ready, path_is_clear]
+    effects: [object_held]
+    timeout_s: 12
+    risk: medium
+    failure_codes: [object_not_found, path_blocked, grasp_failed, timeout]
+    verifier: verify_grasp
+  - name: place_object
+    description: 将手中物体放入目标盒子
+    parameters:
+      object_id: string
+      bin_id: string
+    preconditions: [object_held, robot_ready, path_is_clear]
+    effects: [object_in_bin]
+    timeout_s: 12
+    risk: medium
+    failure_codes: [object_lost, path_blocked, placement_failed, timeout]
+    verifier: verify_placement
+  - name: verify_grasp
+    description: 根据环境证据确认夹爪已抓住物体
+    parameters:
+      object_id: string
+    preconditions: []
+    effects: []
+    timeout_s: 3
+    risk: low
+    failure_codes: [grasp_failed]
+    verifier: null
+  - name: verify_placement
+    description: 根据环境证据确认物体已进入目标盒子
+    parameters:
+      object_id: string
+      bin_id: string
+    preconditions: []
+    effects: []
+    timeout_s: 3
+    risk: low
+    failure_codes: [placement_failed]
+    verifier: null
+  - name: recover
+    description: 有限失败恢复：重观察、重规划或安全停止
+    parameters:
+      failure_code: string
+    preconditions: [robot_ready]
+    effects: []
+    timeout_s: 8
+    risk: low
+    failure_codes: [unknown]
+    verifier: null

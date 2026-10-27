@@ -1,0 +1,34 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+  "python.terminal.activateEnvironment": true,
+  "python.analysis.extraPaths": ["${workspaceFolder}"],
+  "python.analysis.typeCheckingMode": "basic",
+  "python.testing.pytestEnabled": true,
+  "python.testing.pytestArgs": ["tests"],
+  "python.testing.pytestPath": "${workspaceFolder}/.venv/bin/pytest",
+  "python.testing.unittestEnabled": false,
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    }
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "cmake.generator": "Ninja",
+  "ros.distro": "jazzy",
+  "terminal.integrated.env.linux": {
+    "PYTHONPATH": "${workspaceFolder}",
+    "RMW_IMPLEMENTATION": "rmw_cyclonedds_cpp"
+  },
+  "terminal.integrated.profiles.linux": {
+    "Codex + Harness": {
+      "path": "/bin/bash",
+      "args": ["-lc", "source /opt/ros/jazzy/setup.bash && export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp && source ${workspaceFolder}/.venv/bin/activate && exec bash"]
+    }
+  },
+  "terminal.integrated.defaultProfile.linux": "Codex + Harness",
+  "ROS2.distro": "jazzy"
+}
